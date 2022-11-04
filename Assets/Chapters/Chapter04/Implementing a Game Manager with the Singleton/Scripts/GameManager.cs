@@ -33,7 +33,7 @@ namespace Chapter.Singleton
         }
 
         void OnGUI() {
-            if (GUILayout.Button("Next Scene")) {
+            if (GUILayout.Button("Singleton Next Scene")) {
                 SceneManager.LoadScene(
                     SceneManager.GetActiveScene().buildIndex + 1);
             }

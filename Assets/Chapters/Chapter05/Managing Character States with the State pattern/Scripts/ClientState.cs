@@ -1,3 +1,4 @@
+using Chapter.Singleton;
 using UnityEngine;
 
 namespace Chapter.State
@@ -15,11 +16,17 @@ namespace Chapter.State
         
         void OnGUI() 
         {
+            
             if (GUILayout.Button("Start Bike"))
+            {
                 _bikeController.StartBike();
+            }
             
             if (GUILayout.Button("Turn Left"))
+            {
+                var test = GameManager.Instance;
                 _bikeController.Turn(Direction.Left);
+            }
             
             if (GUILayout.Button("Turn Right"))
                 _bikeController.Turn(Direction.Right);
